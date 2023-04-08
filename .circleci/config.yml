@@ -29,7 +29,7 @@ jobs:
       - run:
           name: AWS EC2 deploy
           command: |
-ssh -i ~/.ssh/circleci.pem ubuntu@44.203.171.61 'mkdir -p /path/to/remote/directory && cat > /path/to/remote/directory/config.yml' < config.yml
+            ssh -o StrictHostKeyChecking=no ubuntu@13.236.1.107 \
             "echo Start deploy && \
             cd ~/circleci-aws && \
             git pull && \
